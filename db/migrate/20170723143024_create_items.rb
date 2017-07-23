@@ -1,10 +1,10 @@
-class CreateElements < ActiveRecord::Migration
+class CreateItems < ActiveRecord::Migration
   def change
-    create_table :elements do |t|
+    create_table :items do |t|
       t.string :title
       t.text :description
-      t.string :button_url
       t.string :category
+      t.string :image
 
       t.timestamps null: false
     end

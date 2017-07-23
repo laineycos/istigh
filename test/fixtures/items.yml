@@ -3,11 +3,11 @@
 one:
   title: MyString
   description: MyText
-  button_url: MyString
   category: MyString
+  image: MyString
 
 two:
   title: MyString
   description: MyText
-  button_url: MyString
   category: MyString
+  image: MyString

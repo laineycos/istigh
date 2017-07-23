@@ -11,15 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170718201959) do
+ActiveRecord::Schema.define(version: 20170723143219) do
 
-  create_table "elements", force: :cascade do |t|
+  create_table "items", force: :cascade do |t|
     t.string   "title"
     t.text     "description"
-    t.string   "button_url"
     t.string   "category"
+    t.string   "image"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+  end
+
+  create_table "plans", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end
