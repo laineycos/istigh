@@ -1,3 +1,17 @@
-<%= link_to 'Home', root_path %>
-<%= link_to 'About Us', home_about_path %>
-<%= link_to 'Contact', home_contact_path %>
+<nav class="navbar navbar-default">    <%# bootstrap nav component code #%> 
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <%= link_to 'Home', root_path %>
+      <%= link_to 'About Us', home_about_path %>
+      <%= link_to 'Contact', home_contact_path %>
+      <%= link_to 'Help', home_help_path %> 
+       <a class="navbar-brand" href="#">
+        <%#= image_tag ('ISTIGH-Logo.png') #%>
+      </a>
+    </div>
+  </div>
+</nav>
+
+
+
+

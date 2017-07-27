@@ -7,4 +7,17 @@ class HomeController < ApplicationController
 
   def contact
   end
+  
+  def assess 
+  end
+  
+  def learn
+  end
+  
+  def diary
+  end
+  
+  def help
+  end
+
 end
