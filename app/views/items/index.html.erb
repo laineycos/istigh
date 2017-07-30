@@ -4,7 +4,7 @@
 
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Items</h1>
+<h1>Self Care Catalogue</h1>
 
 <table>
   <thead>
@@ -26,11 +26,14 @@
         <td><%= item.image %></td>
         <td><%= link_to 'Show', item %></td>
         
+        <%# if @item.user == current_user %>
         <td><%= link_to 'Edit', edit_item_path(item) %></td>
         <td><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
-      
-      <%= link_to 'New Item', new_item_path %>
+
+      <%# end %>
     <% end %>
   </tbody>
-</table>
+</table>      
+
+<%= link_to 'New Item', new_item_path %>

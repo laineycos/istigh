@@ -16,7 +16,7 @@ class ItemsController < ApplicationController
 
   # GET /items/new
   def new
-    @item = current_user.items.build 
+    @item = Item.new 
   end
 
   # GET /items/1/edit
@@ -26,7 +26,7 @@ class ItemsController < ApplicationController
   # POST /items
   # POST /items.json
   def create
-    @item = current_user.items.build(item_params)
+    @item = Item.new(item_params)
 
     respond_to do |format|
       if @item.save
@@ -75,9 +75,9 @@ class ItemsController < ApplicationController
   end
   
   #def correct_user
-   # @item = current_user.items.find_by(id: params[:id])   # current_user is a devise helper 
-   # redirect_to items_path, notice: "Not allowed to edit items" if @item.nil?
-  # end  
+   #@item = current_user.items.find_by(id: params[:id])   # current_user is a devise helper 
+   #redirect_to items_path, notice: "Not allowed to edit items" if @item.nil?
+  #end  
 
   private
     # Use callbacks to share common setup or constraints between actions.

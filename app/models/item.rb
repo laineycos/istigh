@@ -1,5 +1,6 @@
 class Item < ActiveRecord::Base
     belongs_to :user
-    belongs_to :plans
-    has_many :plans 
+    belongs_to :plan
+    has_many :plans
+    has_many :items
 end
