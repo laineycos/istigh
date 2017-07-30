@@ -1,0 +1,301 @@
+/* CSS developed using W3schools tutorials */
+
+*{
+	font-family: sans-serif;
+}
+
+#container {
+	width:960px;
+	margin:auto;
+}
+
+/* plan sidebar */
+#plan-sidebar {
+	float:right;
+	width:360px;
+	height:660px;
+	background:#eee;
+	padding: 150px 5px;
+}
+
+h2, h3 {
+	text-align: center;
+}
+
+h3 {
+	font-size:16px;
+}
+
+ul#carecategories {
+	padding: 0;
+	margin: 40px;
+}
+
+ul#carecategories li {
+	list-style-type: none;
+	dislay:block;
+	width:100px;
+	margin:0;
+	padding:0; 	
+}
+
+ul#carecategories li a {
+    display: block;
+    width:250px;
+    text-align: center;
+    color:#FFFFFF;
+    background-color:#E76868; /* first colour used #BC5959 */
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+ul#carecategories li a:hover {
+	background-color:#FFE3E0;
+	color:#191919;
+}
+
+/* items catalogue */
+
+#itemswrap {
+    margin: 0 auto;
+    background:none;
+}
+
+#itemscat {
+    border:0px 2px 2px 2px solid #DA4C5C;
+    margin: 0 auto;
+}
+
+/*
+.bigbox{
+    height:450px;
+    width: auto;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    backface-visibility: 1;
+}
+
+.bigbox img{
+  width: 100%;
+  height: 100%;
+}
+
+.promobox{
+    height:300px;
+    border-color:#FFF;
+    border-style:solid;
+    margin: 0 auto;
+    width: 33%;
+    text-align: center;
+}
+
+.promobox img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.promobox:hover {
+    border: 3px solid #F5CAC9;
+}
+
+*/
+
+.items {
+    height:250px;
+    border-color:#FFF;
+    border-style:solid;
+    margin: 0 auto;
+    width: 30%;
+    text-align: center;
+}
+
+.items img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  z-index: -1;
+}
+
+.desc{
+  background-color: #ffffff;
+  font-size:18px;
+  font-weight: 100;
+  text-align:center;
+  transition: color .25s;
+}
+
+.desc a{
+  color:#191919;
+}
+
+.items:hover {
+  border: 3px solid #F5CAC9;
+  }
+
+.desc a:hover{
+  color:#E5E5E5;
+} 
+
+.desc a:hover:before {
+  width: 100%;
+  background: #333333;
+  transition: width .25s;
+}
+
+.desc a:after {
+  background: #ffffff;
+  opacity: .5;
+}
+
+/*planspace */
+
+#planspace {
+	float:left;
+	width:60%;
+	height:640px;
+	padding:10px 5px;
+	background:#E5E5E5;
+	position:relative;
+}
+
+.planspace-buttons-new {
+    background-color: #69C19E; /* Planspace uses Forest Green buttons */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    float:left;
+}
+
+/* #planspace-mind, #planspace-spirit, #planspace-workplace 
+#planspace-body {
+	float:left;
+	margin-left:20px;
+	margin-bottom: 40px;
+	margin-right: 40px;
+	top: 10px; 
+	left: 3px; 
+	width: 40%; 
+	height: 250px; 
+	background-color: white; 
+	padding-right: 10px;
+	display:inline-grid;
+}
+
+#planspace-mind {
+	float:left;
+	margin-bottom:40px;
+	top: 10px; 
+	left: 3px; 
+	width: 40%; 
+	height: 250px; 
+	background-color: white; 
+	padding-right: 10px;
+	display:inline-grid;
+}
+
+#planspace-spirit {
+	float:left;
+	margin-right:40px;
+	margin-left:20px;
+	top: 10px; 
+	left: 3px; 
+	width: 40%; 
+	height: 250px; 
+	background-color: white; 
+	padding-right: 10px;
+	display:inline-grid;
+}
+
+#planspace-workplace {
+	float:left;
+	top: 10px; 
+	left: 3px; 
+	width: 40%; 
+	height: 250px; 
+	background-color: white; 
+	display: inline-grid;
+	padding-right: 10px;
+}
+
+*/
+
+.planspace-buttons-savespace {
+	background-color: #69C19E; /* Planspace uses Forest Green buttons */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    float:left;
+}
+
+.plans { 						/* buttons for plan functions */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.button-save {
+	background-color:#e3f00b; /* yellow green */
+	color: black;
+	cursor: pointer;
+	} 
+
+.button-print {
+	background-color: #f44336;  /* red */
+	padding-left: 20px;
+	margin-left: 20px;
+	cursor: pointer;
+	} 
+
+.button-open {
+	background-color: #5BB2B2; /* blue */ 
+	color: white;
+	margin: 40px;
+	cursor: pointer;
+	} 
+
+/* additional details plan - under catalogue */
+textarea {
+	margin-bottom: 10px;
+	width: 100%;
+}
+
+form, input {
+	width:92%;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+}
+
+#supportppl {
+	float:left;
+	padding-bottom: 10px;
+	margin-bottom: 5px;
+}
+
+/*
+#footer {
+	clear:both;	
+	width: 100%;
+	height:50px;
+	padding:5px;
+	background:#7FBF7F;
+	color:#FFFFFF;
+	text-align:center;
+}
+*/

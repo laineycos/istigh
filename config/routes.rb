@@ -11,10 +11,11 @@ Rails.application.routes.draw do
   get 'home/learn'
   
   get 'home/diary'
-  
-  get 'home/plans'
+
+  get 'home/plans' => 'plans#index'
   
   get 'home/help'
+  
 
   resources :plans
   resources :items

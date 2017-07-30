@@ -19,5 +19,8 @@ class HomeController < ApplicationController
   
   def help
   end
+  
+  def plans
+  end
 
 end
