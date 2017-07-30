@@ -16,7 +16,10 @@ Rails.application.routes.draw do
   
   get 'home/help'
   
-
+  #get 'plans/id' =>  'plans#show'
+  
+  #get 'category/:id' => 'items#category'
+  
   resources :plans
   resources :items
   # The priority is based upon order of creation: first created -> highest priority.

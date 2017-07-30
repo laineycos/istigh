@@ -1,5 +1,9 @@
 class PlansController < ApplicationController
   before_action :set_plan, only: [:show, :edit, :update, :destroy]
+  
+  # need to authenticate the user before the CRUD is available to them 
+  before_action :authenticate_user!, except: [:index, :show]
+  before_action :correct_user, only: [:edit, :update, :destroy]
 
   # GET /plans
   # GET /plans.json
@@ -14,7 +18,7 @@ class PlansController < ApplicationController
 
   # GET /plans/new
   def new
-    @plan = Plan.new
+    @plan = current_user.plans.build
   end
 
   # GET /plans/1/edit
@@ -24,7 +28,7 @@ class PlansController < ApplicationController
   # POST /plans
   # POST /plans.json
   def create
-    @plan = Plan.new(plan_params)
+    @plan = current_user.plans.build(plan_params)
 
     respond_to do |format|
       if @plan.save
@@ -60,6 +64,12 @@ class PlansController < ApplicationController
       format.json { head :no_content }
     end
   end
+  
+  # define correct_user method and authorisation message 
+  def correct_user
+    @plan = current_user.plans.find_by(id: params[:id])   # current_user is a devise helper 
+    redirect_to plans_path, notice: "You cannot view this plan - please login" if @plan.nil?
+  end  
 
   private
     # Use callbacks to share common setup or constraints between actions.

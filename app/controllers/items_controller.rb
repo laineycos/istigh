@@ -1,5 +1,7 @@
 class ItemsController < ApplicationController
   before_action :set_item, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:index, :show]
+  #before_action :correct_user, only: [:edit, :update, :destroy]
 
   # GET /items
   # GET /items.json
@@ -14,7 +16,7 @@ class ItemsController < ApplicationController
 
   # GET /items/new
   def new
-    @item = Item.new
+    @item = current_user.items.build 
   end
 
   # GET /items/1/edit
@@ -24,7 +26,7 @@ class ItemsController < ApplicationController
   # POST /items
   # POST /items.json
   def create
-    @item = Item.new(item_params)
+    @item = current_user.items.build(item_params)
 
     respond_to do |format|
       if @item.save
@@ -50,7 +52,18 @@ class ItemsController < ApplicationController
       end
     end
   end
-
+  
+  # Items category 
+  #def category
+   # @items = item.find_all_by_category(params[:id])
+  #  @category = params[:id]
+    
+  #  respond_to do |format|
+  #    format.html # index.html.erb
+  #    format.json {render json: @items }
+  #  end
+ # end
+      
   # DELETE /items/1
   # DELETE /items/1.json
   def destroy
@@ -60,6 +73,11 @@ class ItemsController < ApplicationController
       format.json { head :no_content }
     end
   end
+  
+  #def correct_user
+   # @item = current_user.items.find_by(id: params[:id])   # current_user is a devise helper 
+   # redirect_to items_path, notice: "Not allowed to edit items" if @item.nil?
+  # end  
 
   private
     # Use callbacks to share common setup or constraints between actions.
