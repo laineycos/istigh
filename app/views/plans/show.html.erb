@@ -5,7 +5,37 @@
   <%= @plan.name %>
 </p>
 
+<div id= "planspace">
+  <strong>Plan Space:</strong>
+  <br><br>
+  <%= @plan.planspace %>
+</div>
+
+<div id="supportppl">
+          <br>
+          <textarea rows="5" cols="94" placeholder="comments"></textarea>
+        
+          <form action="#"> 
+                My Support People: <br>
+                <input type="textarea" name="mysupport"><br>
+                Three Goals: <br>
+                <input type="textarea" name="mygoals1" placeholder="name a goal"><br>
+                <input type="textarea" name="mygoals2" placeholder="name a goal"><br>
+                <input type="textarea" name="mygoals3" placeholder="name a goal"><br>
+          </form>
+          
+           <button class="plans button-save">
+            Save Plan
+          </button>
+          
+          <button class="plans button-print">
+            Print Plan
+          </button>
+</div> <!-- end of supportppl div -->
+
+
 <% if @plan.user == current_user %>
-<%= link_to 'Edit', edit_plan_path(@plan) %> |
+<%= link_to 'Edit', edit_plan_path(@plan), class: 'btn btn-default' %> |
 <% end %>
-<%= link_to 'Back', plans_path %>
+
+<%= link_to 'Back', plans_path, class: 'btn btn-default' %>

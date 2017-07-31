@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  
   devise_for :users
   root 'home#index' #home/index made root page 
 
@@ -15,6 +16,10 @@ Rails.application.routes.draw do
   get 'home/plans' => 'plans#index'
   
   get 'home/help'
+  
+  #get 'items/' => 'items#show'
+  
+  #get 'items/catalogue' => 'items#catalogue'
   
   #get 'plans/id' =>  'plans#show'
   

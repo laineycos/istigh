@@ -6,7 +6,7 @@ class ItemsController < ApplicationController
   # GET /items
   # GET /items.json
   def index
-    @items = Item.all
+    @items = Item.order("category DESC").all
   end
 
   # GET /items/1
@@ -78,6 +78,9 @@ class ItemsController < ApplicationController
    #@item = current_user.items.find_by(id: params[:id])   # current_user is a devise helper 
    #redirect_to items_path, notice: "Not allowed to edit items" if @item.nil?
   #end  
+  
+  def catalogue
+  end
 
   private
     # Use callbacks to share common setup or constraints between actions.
@@ -87,6 +90,6 @@ class ItemsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def item_params
-      params.require(:item).permit(:title, :description, :category, :image)
+      params.require(:item).permit(:title, :description, :category)
     end
 end

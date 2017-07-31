@@ -1,7 +1,16 @@
+<title>Istigh | Plan </title>
+
 <p id="notice"><%= notice %></p>
 
 <h1>My Plans</h1>
 
+<%= link_to 'New Plan', new_plan_path, class: 'btn btn-default' %>      <%# bootstrap buttons %>
+<br><br>
+<%= link_to 'Self Care Pieces', items_path, class: 'btn btn-default' %>      <%# bootstrap buttons %>
+ 
+<br><br>
+
+<table id= "myplans">
 <table>
   <thead>
     <tr>
@@ -15,16 +24,24 @@
       <tr>        
       <% if plan.user == current_user %>
         <td><%= plan.name %></td>
-        <td><%= link_to 'Show', plan %></td>
-        <td><%= link_to 'Edit', edit_plan_path(plan) %></td>
-        <td><%= link_to 'Destroy', plan, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
+        <td><%= link_to 'Show', plan, class: 'btn btn-default' %></td>  <%# bootstrap buttons %>
+        <td><%= link_to 'Edit', edit_plan_path(plan), class: 'btn btn-default' %></td>  <%# bootstrap buttons %>
+        <td><%= link_to 'Destroy', plan, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-default' %></td>
         <% end %>
       </tr>
     <% end %>
   </tbody>
 </table>
 
-
-<%= link_to 'New Plan', new_plan_path %>
-<br><br>
-<%= link_to 'View Care Categories', items_path %>
+ <div id="plan-sidebar">              
+      <%#= link_to 'Edit', edit_item_path(item) %>
+      <h2>Self Care</h2>
+        <h3>Select and add to your plan</h3>
+          <ul id="carecategories">
+              <li><% link_to 'Items', items_path %><b>Items<b></li>
+              <li><%#= link_to=' '><b>Mind<b> %></li>
+              <li><%#= link_to=' '><b>Spirit<b> %></li>
+              <li><%#= link_to=' '><b>Workplace<b> %></li>
+          </ul>         
+  </div> 

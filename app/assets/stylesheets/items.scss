@@ -1,3 +1,27 @@
 // Place all the styles related to the Items controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+th, td {
+        
+    padding: 15px;
+    text-align: left;
+}
+
+.items {
+    height:50px;
+    border-color:#FFF;
+    border-style:solid;
+    margin: 0 auto;
+    width: 20%;
+    max-width:50px;
+    max-height:50px;
+    text-align: center;
+}
+
+.items image_tag {
+  width: 20%;
+  height: 40%;
+  display: block;
+  z-index: -1;
+}

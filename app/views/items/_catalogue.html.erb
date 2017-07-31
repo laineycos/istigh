@@ -1,0 +1,104 @@
+<title>Istigh | Plan </title>
+
+  <div id="container">
+
+    <div id="plan-sidebar">              
+            <button class="plans button-open">
+            My Plans
+            </button>
+
+            <%#= link_to 'Edit', edit_item_path(item) %>
+            <h2>Self-Care</h2>
+              <h3>Select and add to your plan</h3>
+              <ul id="carecategories">
+                <li><%# link_to 'Show', items_catalogue_path %><b>Body<b></li>
+                <li><%#= link_to=' '><b>Mind<b> %></li>
+                <li><%#= link_to=' '><b>Spirit<b> %></li>
+                <li><%#= link_to=' '><b>Workplace<b> %></li>
+              </ul>         
+    </div> 
+
+    <div id="planspace"> 
+           <!-- Care Items Catalogue-->
+            <button class="planspace-buttons-new">
+            New Plan
+            </button>
+          
+            <button class="planspace-buttons-savespace">
+            Save
+            </button>
+            
+            <br><br>
+            <br><br>
+
+    <div id="itemswrap">
+        <div id="itemscat">
+            <table style="width:90%">
+                <tr>
+                    <td class="items"><%#= link_to 'Show', items_catalogue_path %><image_tag="images/body-icon.png" alt="Body"%></td>
+                    <td class="items"><%#= link_to %><img src="images/mind-icon.png" alt="Mind"></td>
+                </tr>                
+
+                <tr>
+                    <td class="desc"><%#= link_to="images/body-icon.png">Body< %></td>
+                    <td class="desc"><%#= link_to="#">Mind%>></td>
+                </tr>
+
+                <tr>
+                    <td class="items"><%#= link_to="/items/catalogue"><img src="images/spirit-icon.png" alt="Spirit"> %></td>
+                    <td class="items"><%#= link_to="/items/catalogue"><img src="images/workplace-icon.png" alt="Workplace"> %></td>
+                </tr>
+
+                <tr>
+                    <td class="desc"><%#= link_to="items/catalogue">Spirit< %></td>                    
+                    <td class="desc"><%#= link_to="items/catalogue">Workplace< %></td>
+                </tr>
+            </table>
+        </div> <!--end of itemscat-->    
+    </div> <!-- end of itemswrap box -->
+
+          <!--
+          <div id="planspace-body">
+          <h1>body</h1>
+          </div>    
+
+          <div id="planspace-mind">
+          <h1>mind</h1>
+          </div> 
+          
+          <div id="planspace-spirit">
+          <h1>spirit</h1>
+          </div>
+
+          <div id="planspace-workplace">
+          <h1>workplace</h1>
+          </div>
+          -->
+
+    <div id="supportppl">
+          <br>
+          <textarea rows="5" cols="94" placeholder="comments"></textarea>
+        
+          <form action="#"> 
+                My Support People: <br>
+                <input type="textarea" name="mysupport"><br>
+                Three Goals: <br>
+                <input type="textarea" name="mygoals1" placeholder="name a goal"><br>
+                <input type="textarea" name="mygoals2" placeholder="name a goal"><br>
+                <input type="textarea" name="mygoals3" placeholder="name a goal"><br>
+          </form>
+ 
+          <button class="plans button-save">
+           <b>Save Plan<b>
+           </button>
+
+          <button class="plans button-print">
+            Print Plan
+          </button>
+    </div> <!-- end of supportppl div -->
+  </div> <!-- end of container -->
+  
+<script type="text/javascript">
+</script>
+
+</body>
